@@ -17,7 +17,7 @@ func main() {
                 fmt.Fprintf(w, "PMS,ADDRESS")
         })
 
-        addr,_ := net.ResolveTCPAddr("tcp", "127.0.0.1:8000")
+        addr,_ := net.ResolveTCPAddr("tcp", ":8000")
         listener, _ := net.ListenTCP("tcp", addr)
 
         s := &http.Server{
